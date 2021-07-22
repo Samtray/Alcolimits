@@ -99,7 +99,7 @@ create procedure AddNewDriver
 as
 insert into drivers values (@first_name, @middle_name, @last_name, @photo, @VehiclePlate)
 
---exec AddNewDriver 'Gustavo', 'Torrecillas', 'Cum', 'tphoto.png', 'D12023T';
+--exec AddNewDriver 'Gustavo', 'Torrecillas', 'Beltran', 'tphoto.png', 'D12023T';
 --select * from drivers
 
 --UpdateDriver procedure------------------------------------------------------------------
@@ -120,7 +120,7 @@ photo = @photo,
 VehiclePlate = @VehiclePlate
 where id_driver = @id_driver
 
---exec UpdateDriver 1000, 'Pepe','Marela','Kane','fotazo.png', 'A3827KH' 
+--exec UpdateDriver 1000, 'Pepe','Marela','Varela','fotazo.png', 'A3827KH' 
 --select  * from drivers
 
 
@@ -166,7 +166,7 @@ update vehicles set alcohol_inf = (select * from vw_test), temperature_inf = (se
 where id_vehicle = (select * from vw_test)
 
 
---exec AddNewVehicle 'UWIAN26', 'Chevrolet Ass', '2020', 'Zona Río, Blvd. Zamurano 3000', 'Red'
+--exec AddNewVehicle 'UWIAN26', 'Chevrolet Test', '2020', 'Zona Río, Blvd. Zamurano 3000', 'Red'
 
 
 --UpdateVehicle procedure------------------------------------------------------------------
@@ -298,7 +298,7 @@ create procedure UpdateLogs
 as
 update logs set date_time = @date_time, content = @content where id_log = @id_log;
 
---exec UpdateLogs 1011, '2021-07-21 22:11:17.600', 'Sis'
+--exec UpdateLogs 1011, '2021-07-21 22:11:17.600', 'Test'
 
 --select * from logs
 --select * from alcoholSensor
