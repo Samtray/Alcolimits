@@ -99,7 +99,7 @@ create procedure AddNewDriver
 as
 insert into drivers values (@first_name, @middle_name, @last_name, @photo, @VehiclePlate)
 
---exec AddNewDriver 'Gustavo', 'Torrecillas', 'Beltran', 'tphoto.png', 'D12023T';
+--exec AddNewDriver 'Gustavo', 'Torrecillas', 'Beltran', 'tphoto.png', 'UWIAN26';
 --select * from drivers
 
 --UpdateDriver procedure------------------------------------------------------------------
@@ -168,6 +168,12 @@ where id_vehicle = (select * from vw_test)
 
 --exec AddNewVehicle 'UWIAN26', 'Chevrolet Test', '2020', 'Zona Río, Blvd. Zamurano 3000', 'Red'
 
+--SelectVehiclePate-------------------------------------------------------
+
+create procedure SelectVehiclePlate
+@plate varchar (7)
+as
+select * from vehicles where plate  = @plate;
 
 --UpdateVehicle procedure------------------------------------------------------------------
 
