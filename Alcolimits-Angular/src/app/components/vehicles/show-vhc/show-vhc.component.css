@@ -1,0 +1,18 @@
+.modal-content {
+    background-color: #666;
+    color: white;
+}
+
+.vehicle-photo {
+    margin: 0 auto;
+}
+
+#uno {
+    height: 100px;
+    width: 100px;
+}
+
+h5 {
+    margin: auto 30px auto 0;
+    vertical-align: middle;
+}

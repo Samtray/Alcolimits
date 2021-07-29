@@ -1,0 +1,64 @@
+<div class="d-flex flex-row bd-highlight mb-3">
+    <div class="form-group row me-5" style="width: 50%;">
+
+        <label class="col-sm-2 col-form-label">First Name</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" [(ngModel)]="firstName" placeholder="First name">
+        </div>
+
+        <label class="col-sm-2 col-form-label">Middle Name</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" [(ngModel)]="middleName" placeholder="Middle name">
+        </div>
+
+        <label class="col-sm-2 col-form-label">Last Name</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" [(ngModel)]="lastName" placeholder="Last name">
+        </div>
+
+        <label class="col-sm-2 col-form-label">Vehicle</label>
+        <div class="col-sm-10">
+            <!--select class="form-control" [(ngModel)]="vehiclePlate">
+                <option selected>--Select--</option>
+                <option *ngFor="let vehicle of vehiclePlates">
+                    {{vehicle.plate}}
+                </option>
+            </select-->
+
+            <select class="form-select" aria-label="Disabled select example" aria-placeholder="--Select--" [(ngModel)]="plate">
+                <option [defaultSelected]>--Select--</option>
+                <option *ngFor="let vehicle of vehiclePlates">
+                    {{vehicle.plate}}
+                </option>
+              </select>
+        </div>
+    </div>
+
+
+
+    <div class="ml-3 mr-3 bd-highlight" style="width: 40%;">
+        <label>Profile Picture</label>
+        <div class="mb-3">
+            <img [src]=profilePhoto height="100px" width="150px">
+            <input type="file" (change)="uploadProfilePhoto($event)" class="mt-2" />
+        </div>
+        <label>License Photograph</label>
+        <div>
+            <img [src]=licensePhoto height="100px" width="150px">
+            <input type="file" (change)="uploadLicensePhoto($event)" class="mt-2" />
+        </div>
+    </div>
+</div>
+<!--label class="col-sm-2 col-form-label">Department</label>
+        <div class="col-sm-10">
+            <select class="form-control" [(ngModel)]="Department">
+                <option disabled>--Select--</option>
+                <option *ngFor="let depName of DepartmentList">
+                    {{depName.DepartmentName}}
+                </option>
+            </select>
+        </div-->
+
+
+<button (click)="addDriver()" *ngIf="drv.id==0" class="btn btn-secondary">Add driver</button>
+<button (click)="updateDriver()" *ngIf="drv.id!=0" class="btn btn-secondary">Update driver</button>

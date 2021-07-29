@@ -1,0 +1,38 @@
+<div class="d-flex flex-row bd-highlight mb-3">
+    <div class="form-group row me-5" style="width: 60%;">
+
+        <label class="col-sm-2 col-form-label">Plate</label>
+        <div class="col-sm-10">
+            <input type="text" maxlength="7" class="form-control" [(ngModel)]="plate" placeholder="Vehicle plate (7 characters)">
+        </div>
+
+        <label class="col-sm-2 col-form-label">Model</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" [(ngModel)]="model" placeholder="Vehicle model">
+        </div>
+
+        <label class="col-sm-2 col-form-label">Year</label>
+        <div class="col-sm-10">
+            <input type="text" maxlength="4" minlength="4" required type=”number” class="form-control" [(ngModel)]="year" placeholder="Vehicle model year">
+        </div>
+
+        <label class="col-sm-2 col-form-label">Color</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" [(ngModel)]="color" placeholder="Vehicle color">
+        </div>
+
+    </div>
+
+
+    <div class="ml-3 mr-3 bd-highlight" style="width: 30%;">
+        <label>Vehicle Picture</label>
+        <div class="mt-2">
+            <img [src]=photo onError="this.onerror=null;this.src='http://localhost:59853/Photos/placeholder.jpg';" height="175px" width="200px">
+            <input type="file" (change)="uploadPhoto($event)" class="mt-2" />
+        </div>
+    </div>
+
+</div>
+
+<button (click)="addVehicle()" *ngIf="vhcu.id==0" class="btn btn-secondary">Add vehicle</button>
+<button (click)="updateVehicle()" *ngIf="vhcu.id!=0" class="btn btn-secondary">Update vehicle</button>

@@ -1,0 +1,12 @@
+.btn-secondary {
+    background-color: #444;
+}
+
+.btn-secondary:hover {
+    background-color: #fff;
+}
+
+.active {
+    background-color: #fff;
+    color: black;
+}
