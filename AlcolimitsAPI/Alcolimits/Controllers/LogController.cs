@@ -54,8 +54,7 @@ namespace Alcolimits.Controllers
             try
             {
                 string query = @"
-                          exec AddLog '" + log.dateTime + @"'
-                         ,'" + log.content + @"'
+                          exec AddLog '" + log.content + @"'
                          ,'" + log.vehiclePlate + @"'
                         ";
                 DataTable table = new DataTable();
@@ -69,11 +68,11 @@ namespace Alcolimits.Controllers
                     da.Fill(table);
 
                 }
-                return "Modification successful.";
+                return "Add successful.";
             }
             catch (Exception)
             {
-                return "Modification failed.";
+                return "Add failed.";
             }
 
         }

@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="AlcolimitsDB-Web.config Connection String" description="AlcolimitsDB Cadena de conexión que usa la aplicación en web.config para obtener acceso a la base de datos." defaultValue="data source=DESKTOP-EIEJC75\SQLEXPRESS; user id=Admin; password=alcolimits; initial catalog=Alcolimits;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\sammy\\source\\repos\\AlcolimitsAPI\\Alcolimits\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='AlcolimitsDB']/@connectionString" />
+  </parameter>
+</parameters>

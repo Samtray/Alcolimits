@@ -283,7 +283,6 @@ C:\Users\sammy\source\repos\AlcolimitsAPI - copia\Alcolimits\obj\Debug\Alcolimit
 C:\Users\sammy\source\repos\AlcolimitsAPI - copia\Alcolimits\obj\Debug\Alcolimits.csproj.CopyComplete
 C:\Users\sammy\source\repos\AlcolimitsAPI - copia\Alcolimits\obj\Debug\Alcolimits.dll
 C:\Users\sammy\source\repos\AlcolimitsAPI - copia\Alcolimits\obj\Debug\Alcolimits.pdb
-C:\Users\sammy\source\repos\AlcolimitsAPI\Alcolimits\obj\Debug\Alcolimits.csprojAssemblyReference.cache
 C:\Users\sammy\source\repos\AlcolimitsAPI\Alcolimits\obj\Debug\Alcolimits.csproj.CoreCompileInputs.cache
 C:\Users\sammy\source\repos\AlcolimitsAPI\Alcolimits\obj\Debug\Alcolimits.dll
 C:\Users\sammy\source\repos\AlcolimitsAPI\Alcolimits\obj\Debug\Alcolimits.pdb
@@ -378,3 +377,8 @@ C:\Users\sammy\source\repos\AlcolimitsAPI\Alcolimits\bin\es\System.Web.WebPages.
 C:\Users\sammy\source\repos\AlcolimitsAPI\Alcolimits\bin\es\System.Web.WebPages.Deployment.resources.dll
 C:\Users\sammy\source\repos\AlcolimitsAPI\Alcolimits\bin\es\System.Web.WebPages.Razor.resources.dll
 C:\Users\sammy\source\repos\AlcolimitsAPI\Alcolimits\obj\Debug\Alcolimits.csproj.CopyComplete
+C:\Users\sammy\source\repos\AlcolimitsAPI\Alcolimits\obj\Debug\Alcolimits.csproj.AssemblyReference.cache
+C:\Users\sammy\source\repos\AlcolimitsAPI\Alcolimits\bin\EntityFramework.dll
+C:\Users\sammy\source\repos\AlcolimitsAPI\Alcolimits\bin\EntityFramework.SqlServer.dll
+C:\Users\sammy\source\repos\AlcolimitsAPI\Alcolimits\bin\EntityFramework.xml
+C:\Users\sammy\source\repos\AlcolimitsAPI\Alcolimits\bin\EntityFramework.SqlServer.xml

@@ -358,9 +358,9 @@ namespace Alcolimits.Controllers
         }
 
 
-        [Route("api/alcoholSensor/vhc1")]
+        [Route("api/VehicleStatus/vhc1")]
         [HttpGet]
-        public HttpResponseMessage getAlh1()
+        public HttpResponseMessage getVhc1()
         {
 
             DataTable dt = GetData("exec GetVHC1");
@@ -374,9 +374,9 @@ namespace Alcolimits.Controllers
             return Request.CreateResponse(HttpStatusCode.OK, value);
         }
 
-        [Route("api/alcoholSensor/vhc2")]
+        [Route("api/VehicleStatus/vhc2")]
         [HttpGet]
-        public HttpResponseMessage getAlh2()
+        public HttpResponseMessage getVhc2()
         {
 
             DataTable dt = GetData("exec GetVHC2");
@@ -387,6 +387,42 @@ namespace Alcolimits.Controllers
             };
 
             var json = new JavaScriptSerializer().Serialize(value);
+            return Request.CreateResponse(HttpStatusCode.OK, value);
+        }
+
+        [Route("api/VehicleStatus/vhc3")]
+        [HttpGet]
+        public HttpResponseMessage getVhc3()
+        {
+
+            DataTable dt = GetData("exec GetVHC3");
+
+            Number value = new Number
+            {
+                value = Convert.ToInt32(dt.Rows[0]["value"])
+            };
+
+            var json = new JavaScriptSerializer().Serialize(value);
+            return Request.CreateResponse(HttpStatusCode.OK, value);
+        }
+
+        [Route("api/VehicleStatus/vhcAll")]
+        [HttpGet]
+        public HttpResponseMessage getAll()
+        {
+
+            DataTable dt = GetData("exec GetVhcAll");
+
+            GraphParent value = new GraphParent
+            {
+                values = new GraphChild {
+                    noAlcohol = Convert.ToInt32(dt.Rows[0]["noAlcohol"]),
+                    someAlcohol = Convert.ToInt32(dt.Rows[0]["someAlcohol"]),
+                    highAlcohol = Convert.ToInt32(dt.Rows[0]["highAlcohol"]),
+                }
+            };
+
+            //var json = new JavaScriptSerializer().Serialize(value);
             return Request.CreateResponse(HttpStatusCode.OK, value);
         }
 

@@ -443,11 +443,11 @@ namespace Alcolimits.Controllers
                     file.SaveAs(path);
                     
                 }
-                return "http://localhost:59853/Photos/" + fileName;
+                return "https://alcolimitstest.azurewebsites.net/Photos/" + fileName;
             }
             catch
             {
-                return "http://localhost:59853/Photos/anonymous.png";
+                return "https://alcolimitstest.azurewebsites.net/Photos/anonymous.png";
             }
 
         }

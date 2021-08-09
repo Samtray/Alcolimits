@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.0\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.props')" />
   <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -45,6 +46,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
@@ -171,6 +178,8 @@
     <Compile Include="Controllers\VehicleController.cs" />
     <Compile Include="Controllers\DriverController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Models\GraphChild.cs" />
+    <Compile Include="Models\GraphParent.cs" />
     <Compile Include="Models\Number.cs" />
     <Compile Include="Models\VehicleParent.cs" />
     <Compile Include="Models\ClassesAlcolimitsController\ConAlcoholSensor.cs" />
@@ -202,7 +211,46 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Photos\yard.svg" />
+    <Content Include="Photos\alhRed.png" />
+    <Content Include="Photos\alhRed.svg" />
+    <Content Include="Photos\alhWhite.png" />
+    <Content Include="Photos\alhWhite.svg" />
+    <Content Include="Photos\alhYellow.png" />
+    <Content Include="Photos\alhYellow.svg" />
+    <Content Include="Photos\carBlack.png" />
+    <Content Include="Photos\carBlack.svg" />
+    <Content Include="Photos\carBlue.png" />
+    <Content Include="Photos\carBlue.svg" />
+    <Content Include="Photos\carGray.png" />
+    <Content Include="Photos\carGray.svg" />
+    <Content Include="Photos\carGreen.png" />
+    <Content Include="Photos\carGreen.svg" />
+    <Content Include="Photos\carRed.png" />
+    <Content Include="Photos\carRed.svg" />
+    <Content Include="Photos\location.png" />
+    <Content Include="Photos\location.svg" />
+    <Content Include="Photos\lock.png" />
+    <Content Include="Photos\offRed.png" />
+    <Content Include="Photos\offRed.svg" />
+    <Content Include="Photos\onGreen.png" />
+    <Content Include="Photos\onGreen.svg" />
+    <Content Include="Photos\placeholder.jpg" />
+    <Content Include="Photos\swGreen.png" />
+    <Content Include="Photos\swGreen.svg" />
+    <Content Include="Photos\swRed.png" />
+    <Content Include="Photos\swRed.svg" />
+    <Content Include="Photos\tmpGreen.png" />
+    <Content Include="Photos\tmpGreen.svg" />
+    <Content Include="Photos\tmpRed.png" />
+    <Content Include="Photos\tmpRed.svg" />
+    <Content Include="Photos\tmpYellow.png" />
+    <Content Include="Photos\tmpYellow.svg" />
+    <Content Include="Photos\u1.jpg" />
+    <Content Include="Photos\u2.jpg" />
+    <Content Include="Photos\u3.jpg" />
+    <Content Include="Photos\u4.jpg" />
+    <Content Include="Photos\u5.jpg" />
+    <Content Include="Photos\u6.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -227,6 +275,7 @@
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\CollectionModelDescription.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ApiGroup.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\Api.cshtml" />
+    <None Include="Properties\PublishProfiles\AlcolimitsTest - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -315,7 +364,10 @@
       <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.0\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.0\build\EntityFramework.targets'))" />
   </Target>
+  <Import Project="..\packages\EntityFramework.6.4.0\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
