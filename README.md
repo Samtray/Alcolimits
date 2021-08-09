@@ -2,8 +2,8 @@
 Alcolimits Full-Stack Project
 
 # Integrantes del Equipo
-Castellanos Salgado Samuel Antonio
-Torrecillas Beltrán Jesus Gustavo
+Castellanos Salgado Samuel Antonio  
+Torrecillas Beltrán Jesus Gustavo  
 Grupo 5A
 
 # Acerca de Alcolimits
