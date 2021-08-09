@@ -15,6 +15,7 @@ export class ShowDrvComponent implements OnInit {
     ModalTitle!: string;
     ActivateAddEditDrvComponent:Boolean=false; 
     drv :any;  
+    LCK:any = "Vehicle Locked";
 
     ngOnInit(): void {
       this.refreshDrvList();
@@ -45,8 +46,8 @@ export class ShowDrvComponent implements OnInit {
         firstName:"",
         middleName:"",
         lastName:"",
-        profilePhoto: "http://localhost:59853/Photos/placeholder.jpg",
-        licensePhoto: "http://localhost:59853/Photos/placeholder.jpg",
+        profilePhoto: "https://alcolimitstest.azurewebsites.net/Photos/placeholder.jpg",
+        licensePhoto: "https://alcolimitstest.azurewebsites.net/Photos/placeholder.jpg",
         plate: ""
       };
       console.log(this.drv);

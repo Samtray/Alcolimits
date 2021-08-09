@@ -36,3 +36,16 @@ p {
 .center-align {
     margin: auto;
 }
+
+@keyframes blinker {
+    from {
+        background-color: #b35454;
+    }
+    to {
+        background-color: #666;
+    }
+}
+
+.blink {
+    animation: blinker 1.3s cubic-bezier(.5, 0, 1, 1) infinite;
+}

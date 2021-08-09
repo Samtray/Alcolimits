@@ -13,6 +13,7 @@ export class DashboardComponent implements OnInit, AfterViewInit {
   alh3: any=[];
   vhc1: any=[];
   vhc2: any=[];
+  vhc3: any=[];
   chart: any=[];
   chart2: any=[];
   constructor(private service:AlcolimitsService, private elementRef: ElementRef) { 
@@ -36,6 +37,10 @@ export class DashboardComponent implements OnInit, AfterViewInit {
     this.service.getVHC2().subscribe(data=>{
       this.vhc2=data;
     });
+    this.service.getVHC3().subscribe(data=>{
+      this.vhc3=data;
+      
+    });
     //this.viewdata();
   }
 
@@ -57,12 +62,14 @@ export class DashboardComponent implements OnInit, AfterViewInit {
     this.service.getVHC2().subscribe(data=>{
       this.vhc2=data;
     });
+    this.service.getVHC3().subscribe(data=>{
+      this.vhc3=data;
+      
+    });
     //this.viewdata();
   }
 
-  viewdata(){
-    console.log(this.alh1.values);
-  }
+
 
   ngAfterViewInit() {
     setTimeout(() => {
@@ -106,7 +113,7 @@ export class DashboardComponent implements OnInit, AfterViewInit {
           labels: ["Currently Driving","Not Driving","Locked Vehicles"],
           datasets: [{
             label: 'Today',
-            data: [this.vhc1.value, this.vhc2.value, 1],
+            data: [this.vhc2.value, this.vhc1.value, this.vhc3.value],
             backgroundColor: [
               '#4BDD5E',
               '#FEF84F',

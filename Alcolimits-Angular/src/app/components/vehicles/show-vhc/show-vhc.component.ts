@@ -61,7 +61,7 @@ export class ShowVhcComponent implements OnInit {
         model:"",
         year:"",
         color: "",
-        photo: "http://localhost:59853/Photos/carRed.svg",
+        photo: "https://alcolimitstest.azurewebsites.net/Photos/carRed.svg",
       };
       console.log(this.vhc);
       this.ModalTitle = "Add Vehicle";

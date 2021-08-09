@@ -8,8 +8,8 @@ import { Observable } from 'rxjs';
 })
 export class AlcolimitsService {
   
-  readonly APIUrl= 'http://localhost:59853/api';
-  readonly Photos = 'http://localhost:59853/Photos/';
+  readonly APIUrl= 'https://alcolimitstest.azurewebsites.net/api';
+  readonly Photos = 'https://alcolimitstest.azurewebsites.net/Photos/';
 
   constructor(private http:HttpClient){}
 
@@ -68,10 +68,15 @@ export class AlcolimitsService {
   }
 
   getVHC1():Observable<any[]>{
-    return this.http.get<any>(this.APIUrl+'/alcoholSensor/vhc1');
+    return this.http.get<any>(this.APIUrl+'/VehicleStatus/vhc1');
   }
 
   getVHC2():Observable<any[]>{
-    return this.http.get<any>(this.APIUrl+'/alcoholSensor/vhc2');
+    return this.http.get<any>(this.APIUrl+'/VehicleStatus/vhc2');
   }
+
+  getVHC3():Observable<any[]>{
+    return this.http.get<any>(this.APIUrl+'/VehicleStatus/vhc3');
+  }
+
 }

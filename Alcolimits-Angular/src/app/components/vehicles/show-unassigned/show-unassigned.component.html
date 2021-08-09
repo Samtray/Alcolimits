@@ -2,7 +2,7 @@
     <h1>Unassigned Vehicles</h1>
 </div>
 <div class="container">
-    <div class="row row-cols-4">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4">
         <div *ngFor="let dataItem of Unassigned" class="col">
             <div class="card text-white bg-secondary mb-3 mt-3" style="max-width: 18rem;">
                 <div class="card-header">Vehicle Plate: {{dataItem.vehicle.plate}}</div>

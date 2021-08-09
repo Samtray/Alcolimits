@@ -1,3 +1,8 @@
 .bg-secondary {
     background-color: #666;
 }
+
+.center {
+    margin: 10px auto;
+    align-items: center;
+}
