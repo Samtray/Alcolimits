@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/sammy/AndroidStudioProjects/DriverView/app/src/main/res/drawable-v24/bg_log.xml" value="0.23229166666666667" />
+        <entry key="..\:/Users/sammy/AndroidStudioProjects/DriverView/app/src/main/res/drawable-v24/cardbg2.xml" value="0.23229166666666667" />
+        <entry key="..\:/Users/sammy/AndroidStudioProjects/DriverView/app/src/main/res/drawable-v24/cardbgYellow.xml" value="0.23229166666666667" />
+        <entry key="..\:/Users/sammy/AndroidStudioProjects/DriverView/app/src/main/res/drawable-v24/cardbggreen.xml" value="0.23229166666666667" />
+        <entry key="..\:/Users/sammy/AndroidStudioProjects/DriverView/app/src/main/res/drawable-v24/cardbgred.xml" value="0.23229166666666667" />
+        <entry key="..\:/Users/sammy/AndroidStudioProjects/DriverView/app/src/main/res/drawable-v24/cardbgyellow.xml" value="0.23229166666666667" />
+        <entry key="..\:/Users/sammy/AndroidStudioProjects/DriverView/app/src/main/res/drawable-v24/ic_car_3.xml" value="0.23229166666666667" />
+        <entry key="..\:/Users/sammy/AndroidStudioProjects/DriverView/app/src/main/res/drawable-v24/ic_down.xml" value="0.12447916666666667" />
+        <entry key="..\:/Users/sammy/AndroidStudioProjects/DriverView/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.23229166666666667" />
+        <entry key="..\:/Users/sammy/AndroidStudioProjects/DriverView/app/src/main/res/drawable-v24/ic_up.xml" value="0.12447916666666667" />
+        <entry key="..\:/Users/sammy/AndroidStudioProjects/DriverView/app/src/main/res/drawable-v24/selector.xml" value="0.12447916666666667" />
+        <entry key="..\:/Users/sammy/AndroidStudioProjects/DriverView/app/src/main/res/drawable/cardbg.xml" value="0.23229166666666667" />
+        <entry key="..\:/Users/sammy/AndroidStudioProjects/DriverView/app/src/main/res/drawable/ic_launcher_background.xml" value="0.23229166666666667" />
+        <entry key="..\:/Users/sammy/AndroidStudioProjects/DriverView/app/src/main/res/layout/activity_main.xml" value="0.33" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
