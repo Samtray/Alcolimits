@@ -34,6 +34,26 @@ insert into sensorsMinMax values ('ALH1','No alcohol', 0, 300, '#FFFFFF', 'http:
 insert into sensorsMinMax values ('ALH2','Some alcohol', 301, 500, '#FEF84F', 'http://localhost:59853/Photos/alhYellow.svg');
 insert into sensorsMinMax values ('ALH3','High alcohol', 501, 900, '#E14B4B', 'http://localhost:59853/Photos/alhRed.svg');
 
+update [dbo].[sensorsMinMax] set icon = 'https://alcolimitstest.azurewebsites.net/Photos/tmpGreen.svg' where id  = 'TMP1';
+update [dbo].[sensorsMinMax] set icon = 'https://alcolimitstest.azurewebsites.net/Photos/tmpYellow.svg' where id  = 'TMP2';
+update [dbo].[sensorsMinMax] set icon = 'https://alcolimitstest.azurewebsites.net/Photos/tmpRed.svg' where id  = 'TMP3';
+update [dbo].[sensorsMinMax] set icon = 'https://alcolimitstest.azurewebsites.net/Photos/alhWhite.svg' where id  = 'ALH1';
+update [dbo].[sensorsMinMax] set icon = 'https://alcolimitstest.azurewebsites.net/Photos/alhYellow.svg' where id  = 'ALH2';
+update [dbo].[sensorsMinMax] set icon = 'https://alcolimitstest.azurewebsites.net/Photos/alhRed.svg' where id  = 'ALH3';
+
+update [dbo].[sensorsMinMax] set minimum = 0, maximum = 120 where id  = 'ALH1';
+update [dbo].[sensorsMinMax] set minimum = 121, maximum = 380 where id  = 'ALH2';
+update [dbo].[sensorsMinMax] set minimum = 381, maximum = 1025 where id  = 'ALH3';
+
+update [dbo].[sensorsMinMax] set icon = 'https://alcolimitstest.azurewebsites.net/Photos/alhYellow.svg' where id  = 'ALH2';
+update [dbo].[sensorsMinMax] set icon = 'https://alcolimitstest.azurewebsites.net/Photos/alhRed.svg' where id  = 'ALH3';
+
+update [dbo].[sensorsMinMax] set icon = 'https://alcolimitstest.azurewebsites.net/Photos/tmpGreen.png' where id  = 'TMP1';
+update [dbo].[sensorsMinMax] set icon = 'https://alcolimitstest.azurewebsites.net/Photos/tmpYellow.png' where id  = 'TMP2';
+update [dbo].[sensorsMinMax] set icon = 'https://alcolimitstest.azurewebsites.net/Photos/tmpRed.png' where id  = 'TMP3';
+update [dbo].[sensorsMinMax] set icon = 'https://alcolimitstest.azurewebsites.net/Photos/alhWhite.png' where id  = 'ALH1';
+update [dbo].[sensorsMinMax] set icon = 'https://alcolimitstest.azurewebsites.net/Photos/alhYellow.png' where id  = 'ALH2';
+update [dbo].[sensorsMinMax] set icon = 'https://alcolimitstest.azurewebsites.net/Photos/alhRed.png' where id  = 'ALH3';
 
 create table vehicleMinMax(
 	id varchar (5) primary key,
@@ -49,6 +69,36 @@ insert into vehicleMinMax values ('VHC1', 'Vehicle Off', 'Not Driving', '#E14B4B
 insert into vehicleMinMax values ('VHC2', 'Vehicle Off', 'Driving', '#E14B4B','#4BDD5E', 'http://localhost:59853/Photos/offRed.svg', 'http://localhost:59853/Photos/swGreen.svg');
 insert into vehicleMinMax values ('VHC3', 'Vehicle On ', 'Not Driving', '#4BDD5E','#E14B4B', 'http://localhost:59853/Photos/onGreen.svg', 'http://localhost:59853/Photos/swRed.svg');
 insert into vehicleMinMax values ('VHC4', 'Vehicle On', 'Driving', '#4BDD5E','#4BDD5E', 'http://localhost:59853/Photos/onGreen.svg', 'http://localhost:59853/Photos/swGreen.svg');
+insert into vehicleMinMax values ('LCK1', 'Vehicle Locked', 'Not Driving', '#E14B4B','#E14B4B', 'https://alcolimitstest.azurewebsites.net/Photos/offRed.png', 'https://alcolimitstest.azurewebsites.net/Photos/lock.png');
+
+update [dbo].[vehicleMinMax] set isOn = 'Vehicle Off', isDriving = 'Vehicle Locked' where id = 'LCK1'
+
+update [dbo].[vehicleMinMax] set iconOn = 'https://alcolimitstest.azurewebsites.net/Photos/offRed.svg', 
+iconDriving = 'https://alcolimitstest.azurewebsites.net/Photos/swRed.svg' where id = 'VHC1'
+
+update [dbo].[vehicleMinMax] set iconOn = 'https://alcolimitstest.azurewebsites.net/Photos/offRed.svg', 
+iconDriving = 'https://alcolimitstest.azurewebsites.net/Photos/swGreen.svg' where id = 'VHC2'
+
+update [dbo].[vehicleMinMax] set iconOn = 'https://alcolimitstest.azurewebsites.net/Photos/onGreen.svg', 
+iconDriving = 'https://alcolimitstest.azurewebsites.net/Photos/swRed.svg' where id = 'VHC3'
+
+update [dbo].[vehicleMinMax] set iconOn = 'https://alcolimitstest.azurewebsites.net/Photos/onGreen.svg', 
+iconDriving = 'https://alcolimitstest.azurewebsites.net/Photos/swGreen.svg' where id = 'VHC4'
+
+
+update [dbo].[vehicleMinMax] set iconOn = 'https://alcolimitstest.azurewebsites.net/Photos/offRed.png', 
+iconDriving = 'https://alcolimitstest.azurewebsites.net/Photos/swRed.png' where id = 'VHC1'
+
+update [dbo].[vehicleMinMax] set iconOn = 'https://alcolimitstest.azurewebsites.net/Photos/offRed.png', 
+iconDriving = 'https://alcolimitstest.azurewebsites.net/Photos/swGreen.png' where id = 'VHC2'
+
+update [dbo].[vehicleMinMax] set iconOn = 'https://alcolimitstest.azurewebsites.net/Photos/onGreen.png', 
+iconDriving = 'https://alcolimitstest.azurewebsites.net/Photos/swRed.png' where id = 'VHC3'
+
+update [dbo].[vehicleMinMax] set iconOn = 'https://alcolimitstest.azurewebsites.net/Photos/onGreen.png', 
+iconDriving = 'https://alcolimitstest.azurewebsites.net/Photos/swGreen.png' where id = 'VHC4'
+
+
 
 select * from vehicleMinMax;
 
@@ -238,7 +288,7 @@ insert into temperatureSensor values(0, 'TMP1');
 insert into alcoholSensor values(0, 'ALH1');
 insert into vehicleStatus values('false', 'false', 'VHC1');
 insert into logs values(CURRENT_TIMESTAMP, 'First log message (Test)', @plate)
-insert into [location] values ('Location placeholder', 0, 0, 'http://localhost:59853/Photos/location.svg')
+insert into [location] values ('Location placeholder', 0, 0, 'https://alcolimitstest.azurewebsites.net/Photos/location.png')
 update vehicles set  [location] = (select * from vw_test), alcohol_inf = (select * from vw_test), temperature_inf = (select * from vw_test), status_inf = (select * from vw_test)
 where id = (select * from vw_test);
 
@@ -320,14 +370,25 @@ create procedure UpdateAlcohol
 @val int
 as
 if @val <= (select maximum from sensorsMinMax where id = 'ALH1')
-update alcoholSensor set val = @val, [status] = 'ALH1' where id = @id;
-if @val >= (select minimum from sensorsMinMax where id = 'ALH2') and @val <= (select maximum from sensorsMinMax where id = 'ALH2') 
-update alcoholSensor set val = @val, [status] = 'ALH2' where id = @id;
+begin
+update alcoholSensor set val = @val, [status] = 'ALH1' where id = @id 
+update vehicleStatus set [status] = 'VHC1' where id = @id;
+end
+if @val >= (select minimum from sensorsMinMax where id = 'ALH2') and @val <= (select maximum from sensorsMinMax where id = 'ALH2')
+begin
+update alcoholSensor set val = @val, [status] = 'ALH2' where id = @id 
+update vehicleStatus set [status] = 'VHC1' where id = @id;
+end
 if @val >= (select minimum from sensorsMinMax where id = 'ALH3')
-update alcoholSensor set val = @val, [status] = 'ALH3' where id = @id;
+begin
+update alcoholSensor set val = @val, [status] = 'ALH3' where id = @id
+update vehicleStatus set [status] = 'LCK1' where id = @id;
+end
 
 select * from alcoholSensor 
 select * from sensorsMinMax
+
+select * from vehicleStatus 
 
 exec UpdateAlcohol 1005, 600
 select * from alcoholSensor
@@ -337,10 +398,14 @@ create procedure GetTemperature
 as
 select * from temperatureSensor
 
-create procedure GetTemperatureId
+alter procedure GetTemperatureId
 @id int
 as
-select * from temperatureSensor where @id = @id;
+select * from temperatureSensor where id = @id;
+
+exec GetTemperatureId 1000
+
+select * from temperatureSensor where id = 1000
 
 --UpdateTemperatureProcedure------------------------------------------------------------------
 create procedure UpdateTemperature
@@ -379,19 +444,26 @@ create procedure UpdateStatus
 as
 update vehicleStatus set isOn = @isOn, isDriving = @isDriving where id = @id;
 if (select isOn from vehicleStatus where id = @id)  = 0 and (select isDriving from vehicleStatus where id = @id)  = 0 
+begin
 update vehicleStatus set [status] = 'VHC1' where id = @id;
+end
 if (select isOn from vehicleStatus where id = @id)  = 0 and (select isDriving from vehicleStatus where id = @id)  = 1 
+begin
 update vehicleStatus set [status] = 'VHC2' where id = @id;
+end
 if (select isOn from vehicleStatus where id = @id)  = 1 and (select isDriving from vehicleStatus where id = @id)  = 0 
+begin
 update vehicleStatus set [status] = 'VHC3' where id = @id;
+end
 if (select isOn from vehicleStatus where id = @id)  = 1 and (select isDriving from vehicleStatus where id = @id)  = 1 
+begin
 update vehicleStatus set [status] = 'VHC4' where id = @id;
-
+end
 
 
 select * from vehicleMinMax
 
-exec UpdateStatus 1000, 'false', 'false' 
+exec UpdateStatus 1000, 'false', 'true' 
 select * from vehicleStatus
 --GetLogs procedure------------------------------------------------------------------
 create procedure GetLogs
@@ -404,12 +476,11 @@ as
 select * from logs where vehiclePlate = @plate
 
 --AddLogProcedure------------------------------------------------------------------
-create procedure AddLog
-@dateTime datetime,
+alter procedure AddLog
 @content varchar (100),
 @plate varchar (7)
 as
-insert into logs values (@dateTime, @content, @plate)
+insert into logs values (CURRENT_TIMESTAMP, @content, @plate)
 
 exec AddLog '2021-07-28 22:20', 'Third test log', 'MJHY6TR'
 
@@ -538,6 +609,23 @@ as
 SELECT COUNT(status) as value
 FROM vehicleStatus
 where status = 'VHC2' or status = 'VHC4'
+
+create procedure GetVHC3
+as
+SELECT COUNT(status) as value
+FROM vehicleStatus
+where status = 'LCK1'
+
+alter procedure GetVhcAll
+as 
+SELECT sum(case when status LIKE 'ALH1' then 1 else 0 end) AS noAlcohol,
+    sum(case when status LIKE 'ALH2' then 1 else 0 end) AS someAlcohol,
+	sum(case when status LIKE 'ALH2' then 1 else 0 end) AS highAlcohol
+FROM alcoholSensor
+
+exec GetVhcAll
+
+select * from vehicleMinMax
 
 exec UpdateAlcohol 1000, 0
 
