@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+            android:id="@+id/dashboard"
+            android:icon="@drawable/dashboard"
+            android:title="Dashboard"
+
+
+    />
+
+    <item
+            android:id="@+id/drivers"
+            android:icon="@drawable/person"
+            android:title="Drivers"/>
+
+    <item
+            android:id="@+id/maps"
+            android:icon="@drawable/ic_baseline_map_24"
+            android:title="Map"
+    />
+</menu>

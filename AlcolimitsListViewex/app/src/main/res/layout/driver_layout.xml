@@ -1,0 +1,65 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#272727">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ivUser"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="10dp"
+
+            android:layout_centerVertical="true"/>
+        <TextView
+            android:id="@+id/tvName"
+            android:text="Sam Smith"
+            style="@style/label"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_toEndOf="@id/ivUser"
+
+            />
+        <TextView
+            android:id="@+id/tvIdText"
+            android:text="ID: "
+            style="@style/labelID"
+            android:layout_marginTop="1dp"
+            android:layout_marginLeft="10dp"
+            android:layout_below="@id/tvName"
+            android:layout_toEndOf="@id/ivUser"/>
+
+        <TextView
+            android:id="@+id/tvId"
+            android:text="013212"
+            style="@style/labelID"
+            android:layout_marginTop="1dp"
+            android:layout_below="@id/tvName"
+            android:layout_toEndOf="@id/tvIdText"/>
+
+        <ImageView
+            android:id="@+id/ivSensorExpand"
+            android:layout_alignParentEnd="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_down"
+            android:layout_margin="10dp"
+            android:layout_centerVertical="true"
+            />
+        <ImageView
+            android:id="@+id/ivSensorCollapse"
+            android:layout_alignParentEnd="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_up"
+            android:layout_margin="10dp"
+            android:layout_centerVertical="true"
+            />
+
+    </RelativeLayout>
+
+</RelativeLayout>

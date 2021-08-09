@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/sammy/AndroidStudioProjects/AlcolimitsListViewex/app/src/main/res/drawable/dashboard.xml" value="0.23229166666666667" />
+        <entry key="..\:/Users/sammy/AndroidStudioProjects/AlcolimitsListViewex/app/src/main/res/layout/activity_main.xml" value="0.1046875" />
+        <entry key="..\:/Users/sammy/AndroidStudioProjects/AlcolimitsListViewex/app/src/main/res/layout/activity_maps.xml" value="0.21614583333333334" />
+        <entry key="..\:/Users/sammy/AndroidStudioProjects/AlcolimitsListViewex/app/src/main/res/layout/dashboard.xml" value="0.21614583333333334" />
+        <entry key="..\:/Users/sammy/AndroidStudioProjects/AlcolimitsListViewex/app/src/main/res/layout/driver_child_layout.xml" value="0.33" />
+        <entry key="..\:/Users/sammy/AndroidStudioProjects/AlcolimitsListViewex/app/src/main/res/layout/driver_layout.xml" value="0.1308876811594203" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
