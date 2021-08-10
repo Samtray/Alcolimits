@@ -7,7 +7,7 @@ Torrecillas Beltrán Jesus Gustavo
 Grupo 5A
 
 # Acerca de Alcolimits
-Alcolimits es un proyecta que integra Angular 12, Base de Datos, ASP.NET Framework API, Apps de Android y IoT para determinar la cantidad de alcohol en sangre de una persona, las aplicaciones y base de datos se utilizan para llevar un control de esta información y nuestra propuesta apunta a un sistema de manejo basado en un tipo flota de vehiculos, la cual puedes manejar y ver informacíon de tus conductores o empleados.
+Alcolimits es un proyecto que integra Angular 12, Base de Datos SQL, ASP.NET Framework API, Apps de Android y IoT para determinar la cantidad de alcohol de una persona, teniendo así más seguridad a la hora de conducir un vehiculo, ya que a la mínima detección de alcohol, el vehiculo se detiene. las aplicaciones y base de datos se utilizan para llevar un control de esta información y nuestra propuesta apunta a un sistema de manejo basado en flota de vehiculos/conductores, la cual puedes manejar y ver información de tus conductores o empleados.
 
 # Branch gh-pages
 En esta branch se encuentra hosteado nuestro proyecto de Angular el cual puede ser visitado mediante este URL: https://samtray.github.io/Alcolimits/Alcolimits-Angular
