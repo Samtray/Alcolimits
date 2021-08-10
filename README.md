@@ -1,5 +1,5 @@
 # Alcolimits
-Alcolimits Full-Stack Project
+Alcolimits Proyecto Full-Stack
 
 # Integrantes del Equipo
 Castellanos Salgado Samuel Antonio  
