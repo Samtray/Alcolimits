@@ -25,11 +25,14 @@ import com.android.volley.toolbox.NetworkImageView;
 import com.android.volley.toolbox.Volley;
 
 import org.eclipse.paho.android.service.MqttAndroidClient;
+import org.eclipse.paho.client.mqttv3.DisconnectedBufferOptions;
 import org.eclipse.paho.client.mqttv3.IMqttActionListener;
 import org.eclipse.paho.client.mqttv3.IMqttDeliveryToken;
 import org.eclipse.paho.client.mqttv3.IMqttToken;
 import org.eclipse.paho.client.mqttv3.MqttCallback;
+import org.eclipse.paho.client.mqttv3.MqttCallbackExtended;
 import org.eclipse.paho.client.mqttv3.MqttClient;
+import org.eclipse.paho.client.mqttv3.MqttConnectOptions;
 import org.eclipse.paho.client.mqttv3.MqttException;
 import org.eclipse.paho.client.mqttv3.MqttMessage;
 import org.json.JSONArray;
@@ -63,6 +66,28 @@ public class MainActivity extends AppCompatActivity {
         RequestQueue requestQueue;
         MqttAndroidClient client = new MqttAndroidClient(this.getApplicationContext(), "tcp://broker.hivemq.com:1883",
                         clientId);
+        client.setCallback(new MqttCallbackExtended() {
+            @Override
+            public void connectComplete(boolean reconnect, String serverURI) {
+                if(reconnect){
+                    Log.d("MQTT", "Reconnected");
+                }
+                else{
+                    Log.d("MQTT", "Connected");
+                }
+            }
+
+            @Override
+            public void connectionLost(Throwable cause) { Log.d("MQTT", "Connection lost");}
+            @Override
+            public void messageArrived(String topic, MqttMessage message) throws Exception { }
+            @Override
+            public void deliveryComplete(IMqttDeliveryToken token) { Log.d("MQTT", "Message delivered");}
+        });
+
+        MqttConnectOptions mqttConnectOptions = new MqttConnectOptions();
+        mqttConnectOptions.setAutomaticReconnect(true);
+        mqttConnectOptions.setCleanSession(false);
 
         try {
             IMqttToken token = client.connect();
@@ -73,15 +98,18 @@ public class MainActivity extends AppCompatActivity {
                     Log.d(TAG, "onSuccess");
                     String topic = "UTT/Alcolimits/Test";
                     int qos = 1;
+                    DisconnectedBufferOptions disconnectedBufferOptions = new DisconnectedBufferOptions();
+                    disconnectedBufferOptions.setBufferEnabled(true);
+                    disconnectedBufferOptions.setBufferSize(100);
+                    disconnectedBufferOptions.setPersistBuffer(false);
+                    disconnectedBufferOptions.setDeleteOldestMessages(true);
+                    client.setBufferOpts(disconnectedBufferOptions);
                     try {
                         Log.d("tag","mqtt channel name>>>>>>>>" + topic);
                         Log.d("tag","client.isConnected()>>>>>>>>" + client.isConnected());
                         if (client.isConnected()) {
                             client.subscribe(topic, qos);
                             client.setCallback(new MqttCallback() {
-                                @Override
-                                public void connectionLost(Throwable cause) {
-                                }
 
                                 @Override
                                 public void messageArrived(String topic, MqttMessage message) throws Exception {
@@ -120,10 +148,22 @@ public class MainActivity extends AppCompatActivity {
                                 }
 
                                 @Override
-                                public void deliveryComplete(IMqttDeliveryToken token) {
-
+                                public void connectionLost(Throwable cause) {
+                                    ImageView ivMessages = findViewById(R.id.ivMessages);
+                                    TextView tvMessagesText = findViewById(R.id.tvMessagesText);
+                                    TextView tvMessagesStatus  = findViewById(R.id.tvMessagesStatus);
+                                    RelativeLayout rlMessagesBox = findViewById(R.id.rlMessagesBox);
+                                    ivMessages.setImageResource(R.drawable.ic_close);
+                                    tvMessagesText.setText("MQTT Connection Lost");
+                                    tvMessagesStatus.setText("RIP");
+                                    rlMessagesBox.setBackgroundResource(R.drawable.cardbg2);
                                 }
+
+                                @Override
+                                public void deliveryComplete(IMqttDeliveryToken token) { Log.d("MQTT", "Message delivered");}
+
                             });
+
                         }
                     } catch (Exception e) {
                         Log.d("tag","Error :" + e);
