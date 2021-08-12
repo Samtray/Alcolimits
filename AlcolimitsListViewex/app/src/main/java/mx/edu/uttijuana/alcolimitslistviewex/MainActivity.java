@@ -158,7 +158,9 @@ public class MainActivity extends AppCompatActivity {
                             response = response.getJSONObject("values");
                             int noAl = response.getInt("noAlcohol");
                             int someAl = response.getInt("someAlcohol");
-                            drivers.add(new PieEntry((someAl),"Failed"));
+                            int highAl = response.getInt("highAlcohol");
+                            int last = (someAl + highAl);
+                            drivers.add(new PieEntry((last),"Failed"));
                             drivers.add(new PieEntry(noAl,"Passed"));
                             drivers.add(new PieEntry(1,"Not available"));
 
