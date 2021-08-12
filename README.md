@@ -14,3 +14,6 @@ En esta branch se encuentra hosteado nuestro proyecto de Angular el cual puede s
 
 # Branch master
 En esta branch se encuentra nuestro código fuente restante, ademas de eso tambíen se puede visitar la documentación de nuestra API hosteada en Azure mediante este URL: https://alcolimitstest.azurewebsites.net/help o consultar el JSON completo en https://alcolimitstest.azurewebsites.net/api/Driver
+
+# Video del Proyecto
+En esta liga se puede mirar la explicación completa de nuestro sistema: https://www.youtube.com/watch?v=3GbK45-td5Y
